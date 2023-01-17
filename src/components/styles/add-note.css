@@ -1,0 +1,30 @@
+/* new note stylings */
+.new-note {
+  background-color: var(--card-background-color);
+  color: var(--text-color-300);
+}
+
+.new-note textarea {
+  border: none;
+  resize: none;
+  background-color: var(--card-background-color);
+  color: var(--text-color-300);
+}
+
+.new-note textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  font-size: 1.4rem;
+}
+
+.save:hover {
+  background-color: var(--text-color-100);
+  color: white;
+  cursor: pointer;
+}
