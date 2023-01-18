@@ -1,6 +1,5 @@
 .search {
   margin: 0 auto;
-  width: 48rem;
   display: flex;
   align-items: center;
   background-color: var(--card-background-color);

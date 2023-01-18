@@ -1,6 +1,6 @@
 import Notes from "./components/component/notes";
 import "./components/styles/zero.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { nanoid } from "nanoid";
 import "./components/styles/shared.css";
 import "./app.css";
@@ -26,6 +26,23 @@ function App() {
     },
   ]);
   const [searchText, setSearchText] = useState("");
+
+  useEffect(() => {
+    localStorage.setItem(
+      "react-notes-application-database",
+      JSON.stringify(notes)
+    );
+  }, [notes]);
+
+  useEffect(() => {
+    const savedNotes = JSON.parse(
+      localStorage.getItem("react-notes-application-database")
+    );
+
+    if (savedNotes) {
+      setNotes(savedNotes);
+    }
+  }, []);
 
   const addNote = (text) => {
     const date = new Date();
