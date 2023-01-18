@@ -1,0 +1,24 @@
+.search {
+  margin: 0 auto;
+  width: 48rem;
+  display: flex;
+  align-items: center;
+  background-color: var(--card-background-color);
+  padding: 6px;
+  margin-bottom: 3rem;
+  border-radius: 6px;
+}
+
+.search input {
+  width: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+  border: none;
+  font-family: var(--text-paragraph-font);
+  background-color: var(--card-background-color);
+}
+
+.search input:focus {
+  outline: none;
+}

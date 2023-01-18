@@ -1,0 +1,16 @@
+.header {
+  text-align: center;
+  color: var(--text-color-200);
+  margin: 4rem;
+}
+
+.header h1 {
+  font-family: var(--text-heading-font);
+  font-size: 6rem;
+}
+
+.header p {
+  font-family: var(--text-paragraph-font);
+  font-size: 1.8rem;
+  font-weight: var(--card-text-weight);
+}

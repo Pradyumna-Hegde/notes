@@ -3,7 +3,9 @@ import "./components/styles/zero.css";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import "./components/styles/shared.css";
-import "./App.css";
+import "./app.css";
+import Search from "./components/component/search";
+import Header from "./components/component/header";
 
 function App() {
   const [notes, setNotes] = useState([
@@ -23,6 +25,7 @@ function App() {
       date: "15/04/2021",
     },
   ]);
+  const [searchText, setSearchText] = useState("");
 
   const addNote = (text) => {
     const date = new Date();
@@ -42,8 +45,12 @@ function App() {
 
   return (
     <div className="app-container">
+      <Header />
+      <Search handleSearchNote={setSearchText} />
       <Notes
-        notes={notes}
+        notes={notes.filter((note) =>
+          note.text.toLowerCase().includes(searchText)
+        )}
         handleAddNote={addNote}
         handleDeleteNote={deleteNote}
       />
