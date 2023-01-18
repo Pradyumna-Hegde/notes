@@ -23,11 +23,16 @@
   font-family: var(--text-paragraph-font);
   border-radius: 0.4rem;
   padding: 1.6rem;
-  min-height: 17rem;
+  min-width: 30rem;
+  min-height: 24rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
+}
+
+.delete-icon {
+  cursor: pointer;
 }
 
 .note-footer {
